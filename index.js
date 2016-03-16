@@ -1,15 +1,12 @@
-var express = require('express')
-var app = express()
+var fs = require("fs");
+var filename = "./index.html";
+var buf = fs.readFileSync(filename, "utf8");
 
-/* serves all the static files*/
-app.set('port', (process.env.PORT || 8080))
-app.use(express.static(__dirname + '/public'))
+function start(resp) {
+    resp.writeHead(200, {"Content-type":"text/html"});
+    resp.write(buf);
+    resp.end();
+    } 
+server.listen(8080) // for heroku use .listen(process.env.PORT || 8080)
+console.log("http://127.0.0.1:8080/")
 
-/*serves main page*/
-app.get('/', function(request, response) {
-response.sendfile('index.html') 
-})
-
-app.listen(app.get('port'), function() {
-  console.log("Node app is running at localhost:" + app.get('port'))
-})
