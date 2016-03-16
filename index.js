@@ -7,6 +7,6 @@ function start(resp) {
     resp.write(buf);
     resp.end();
     } 
-server.listen(8080) // for heroku use .listen(process.env.PORT || 8080)
+server.listen(8000) // for heroku use .listen(process.env.PORT || 8080)
 console.log("http://127.0.0.1:8000/")
 
