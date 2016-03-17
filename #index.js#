@@ -1,0 +1,17 @@
+var fs = require("fs");
+var file = "./index.html";
+var buf = fs.readFileSync(file, " } 
+server.listen(8080)
+console.log("http://127.0.0.1:8080/")
+resp. writeHead( resp. end();
+200, {" resp. write( buf);
+Content- type":" text/ html"});
+utf8");
+
+ function start( resp) {
+var fs = require("fs");
+var filename = "./index.html";
+var buf = fs.readFileSync(filename, "utf8");
+
+function start(resp) {
+    resp.writeHea
